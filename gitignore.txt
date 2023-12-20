@@ -1,0 +1,24 @@
+1, What:
+.gitignore là một tệp cấu hình được sử dụng trong hệ thống quản lý phiên bản Git.Nó xác định các tệp và thư mục mà Git nên bỏ qua trong quá trình quản lý phiên bản. Điều này có nghĩa là các thay đổi đối với các tệp được liệt kê trong .gitignore sẽ không được theo dõi hoặc commit.
+2, Why:
+- Ngăn Chặn Quá Trình Phiên Bản Hóa Các Tệp Tạm Thời và Xây Dựng :Logs, tệp tạm thời và các đối tượng xây dựng có thể làm rối lịch sử quản lý phiên bản và thường không cần thiết cho việc hợp tác.
+- Bảo Vệ Cấu Hình và Thông Tin Riêng Tư: Các tệp cấu hình và tệp chứa thông tin nhạy cảm như thông tin đăng nhập hoặc khóa API có thể được giữ riêng tư bằng cách bỏ qua chúng.
+- Loại Bỏ Các Tệp và Thư Mục Dự Án Không Cần Thiết
+3, Who:
+-Mọi người tham gia vào việc phát triển phần mềm sử dụng Git có thể tạo và chỉnh sửa tệp .gitignore để loại bỏ các file không mong muốn khỏi repository.
+-.gitignore để duy trì lịch sử quản lý phiên bản sạch sẽ.
+4, When:
+- Nên thiết lập .gitignore từ đầu dự án để tránh commit những tệp không mong muốn một cách ngẫu nhiên.
+- Khi thêm tệp mới, thay đổi cấu trúc dự án hoặc giới thiệu các quy trình xây dựng mới, cập nhật .gitignore tương ứng.
+5, Where:
+- .gitignore được đặt ở thư mục gốc của kho lưu trữ Git của bạn.
+- .gitignore được đặt ở thư mục gốc của kho lưu trữ Git của bạn. Nó nên được đặt trong cùng thư mục chứa thư mục .git, nơi chứa cấu hình Git và lịch sử phiên bản
+- Tệp tin .gitignore cũng có thể được đặt trong các thư mục con bên trong kho lưu trữ Git của bạn.
+6, How
+QUY TẮC :
+ -  *.log để bỏ qua tất cả các file có đuôi là .log,
+ -  build/ để bỏ qua toàn bộ thư mục build.
+ - Bỏ qua tệp sử dụng config.json 
+
+Sử dụng lệnh git status để kiểm tra xem các tệp được chỉ định trong .gitignore có bị bỏ qua hay không.
+Nếu sử dụng các mô-đun con, đảm bảo rằng mỗi mô-đun con có tệp .gitignore riêng của mình.
